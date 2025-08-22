@@ -5,6 +5,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
+
+  
   
   eleventyConfig.addPassthroughCopy("src/resources");
 
@@ -25,6 +27,8 @@ module.exports = function (eleventyConfig) {
     }
     return num; // 
   });
+  // After Eleventy finishes building, create an empty `.nojekyll` file in the output folder
+
 
   return {
     dir: {
@@ -33,7 +37,23 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
     }
   };
-  
-
-  
+    
 };
+eleventyConfig = module.exports;
+
+if(typeof eleventyConfig ==="function"){
+  const origin = eleventyConfig;
+  module.exports=function(config){
+  const result  = origin(config);
+    const outputDir = (result && result.dir && result.dir.output)|| "docs";
+    const nojekyllPath = path.join(outputDir,".nojekyll");
+    try{
+      fs.writeFileSync(nojekyllPath,"");
+      console.log(".nojekyll file created.");
+
+    } catch(err){
+      console.warn("fail to create .nojekyll file:",err);
+    }
+  }
+  return result;
+}
