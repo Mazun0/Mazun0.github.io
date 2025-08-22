@@ -1,5 +1,8 @@
 const { DateTime } = require("luxon"); // For fomat calender
 
+const fs = require("fs");
+const path = require("path")
+
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", (dateObj) => {
@@ -20,7 +23,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("blog", function(collectionApi) {
     return collectionApi.getFilteredByGlob("./src/blog/*.md");
   });
-  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addFilter("hex", (num) => {
     if (typeof num === "number") {
       return "0x" + num.toString(16).toUpperCase();
@@ -41,12 +44,14 @@ module.exports = function (eleventyConfig) {
 };
 eleventyConfig = module.exports;
 
-if(typeof eleventyConfig ==="function"){
+if(typeof eleventyConfig ==="function") {
   const origin = eleventyConfig;
-  module.exports=function(config){
+  module.exports=function(config) {
   const result  = origin(config);
+  config.on("afterBuild", () => {
     const outputDir = (result && result.dir && result.dir.output)|| "docs";
     const nojekyllPath = path.join(outputDir,".nojekyll");
+    
     try{
       fs.writeFileSync(nojekyllPath,"");
       console.log(".nojekyll file created.");
@@ -54,6 +59,9 @@ if(typeof eleventyConfig ==="function"){
     } catch(err){
       console.warn("fail to create .nojekyll file:",err);
     }
+    });
+    return result;
   }
-  return result;
+ 
 }
+
