@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/main.css">
+
+<!-- MathJax for LaTeX rendering -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['$$', '$$']],
+      tags: 'ams'
+    },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    
+</head>
+
+<body> 
+
+<header class="header">
+
+
+ 
+
+{%if navType == "home" %}
+    <h1>Mazuno</h1>
+{%elseif navType == "about" %}
+    
+    <nav class="metro-nav">
+    <h1>Mazuno</h1>
+        <ul class="nav-line">
+        <li class="nav-dot"><a href="/home">Home</a></li>
+        <li class="nav-dot active"><a href="/about">About me</a></li>
+        <!-- <li class="nav-dot active"><a href="/projects/soccergoal">Goal Line Tech</a></li> -->
+        </ul>
+    </nav>
+     
+
+{%elseif navType == "projectList" %}
+    <nav class="metro-nav">
+    <h1>Mazuno</h1>
+        <ul class="nav-line">
+        <li class="nav-dot"><a href="/home">Home</a></li>
+        <li class="nav-dot active"><a href="/projects">Projects</a></li>
+        <!-- <li class="nav-dot active"><a href="/projects/soccergoal">Goal Line Tech</a></li> -->
+        </ul>
+    </nav>
+
+{%elseif navType == "projectPost" %}
+        <nav class="metro-nav">
+        <h1>Mazuno</h1>
+            <ul class="nav-line">
+            <li class="nav-dot"><a href="/home">Home</a></li>
+            <li class="nav-dot"><a href="/projects">Projects</a></li>
+            <li class="nav-dot active"><a href="#">Post</a></li>
+            </ul>
+        </nav>
+
+
+{%elseif navType == "blogList" %}
+<nav class="metro-nav">
+<h1>Mazuno</h1>
+    <ul class="nav-line">
+    <li class="nav-dot"><a href="/home">Home</a></li>
+    <li class="nav-dot active"><a href="/blog">Blog</a></li>
+  
+</nav>
+
+        
+
+{%elseif navType == "blogPost" %}
+<nav class="metro-nav">
+<h1>Mazuno</h1>
+    <ul class="nav-line">
+    <li class="nav-dot"><a href="/home">Home</a></li>
+    <li class="nav-dot"><a href="/blog">Blog</a></li>
+    <li class="nav-dot active"><a href="#">Post</a></li>
+    </ul>
+</nav>
+
+{% endif %}
+</header>
+
+{% if metroDiv %}
+  <!-- The metro line should be outside the content flow -->
+     <div class="metro-line-wrapper">
+        <div class="metro-line"></div>
+        <!-- Dots and labels will be injected here by JS -->
+    </div>
+{% endif%}
+
+  <main class="{% if pageType == 'about' %}about-content{% else %}page-content{% endif %}">
+
+ {{ content | safe }}
+</main>
+   <footer class="footer">
+    <div class="footer-stuff">
+        <div class="footer-contact">
+            <p>Email: miguel.a.zapata.cs@gmail.com</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://github.com/Mazun0">GitHub</a> | <a href="https://www.linkedin.com/in/miguel-zapata-/">LinkedIn</a>
+        </div>
+        <div class="footer-copyright">
+            <p> 2025 Miguel Zapata All rights are Reserved</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

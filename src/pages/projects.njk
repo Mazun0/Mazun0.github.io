@@ -1,0 +1,25 @@
+---
+title: Projects
+layout: layouts/base.njk
+navType: projectList
+pageType: projectList
+permalink: /projects/
+---
+
+<h2>All Projects</h2>
+<section id="projects" class="project-seciton">
+  <div class="pass-grid">
+  {% for project in collections.projects | reverse %}
+    <a href="{{ project.url }}" class="pass-card pass-{{ project.data.type }}">
+      <div class="card-content">
+        <h3 class="card-title">{{ project.data.title }}</h3>
+        <div class="card-stack">{{ project.data.stack }}</div>
+        <p class="card-desc">{{ project.data.description }}</p>
+        <div class="card-bottom-space">
+        <small>UID: {{ project.data.uid | hex }}  | Issued: {{ project.data.issued }}</small>
+        </div>
+      </div>
+    </a>
+  {% endfor %}
+</div>
+</section>

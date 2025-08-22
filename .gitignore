@@ -1,0 +1,8 @@
+node_modules/
+_site/
+.DS_Store
+.env
+.create-blog.js
+# Ignore generators
+create-blog.js
+create-project.js

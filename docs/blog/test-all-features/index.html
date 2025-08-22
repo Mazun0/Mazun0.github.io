@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Testing All Markdown Features</title>
+    <link rel="stylesheet" href="/css/main.css">
+
+<!-- MathJax for LaTeX rendering -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['$$', '$$']],
+      tags: 'ams'
+    },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body> 
+<header class="header">
+
+<nav class="metro-nav">
+<h1>Mazuno</h1>
+    <ul class="nav-line">
+    <li class="nav-dot"><a href="/home">Home</a></li>
+    <li class="nav-dot"><a href="/blog">Blog</a></li>
+    <li class="nav-dot active"><a href="#">Post</a></li>
+    </ul>
+</nav>
+
+</header>
+
+
+<main class="post-content">
+
+ <h1>test all features</h1>
+<hr>
+<h2>📝 Markdown Basics</h2>
+<ul>
+<li><strong>Bold text</strong></li>
+<li><em>Italic text</em></li>
+<li><code>Inline code</code></li>
+<li><a href="https://example.com">External Link</a></li>
+</ul>
+<hr>
+<h2>🧠 JavaScript Code</h2>
+<pre><code class="language-js">function greet(name) {
+  return `Hello, ${name}!`;
+}
+</code></pre>
+<pre><code class="language-python">def square(x):
+    return x * x
+
+</code></pre>
+<p>Inline: ( \int x^2 dx = \frac{x^3}{3} + C )</p>
+<p>Block:</p>
+<p>$$
+f(x) = ax^2 + bx + c
+$$</p>
+<p>Or even align:</p>
+<p>$$
+\begin{align}
+a &amp;= b + c \
+f(x) &amp;= \int_0^\infty e^{-x} dx
+\end{align}
+$$</p>
+<p><img src="/resources/images/example.jpg" alt="Image"></p>
+<div class="photo-reel">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Havelock_Island%2C_Mangrove_tree_on_the_beach%2C_Andaman_Islands.jpg" alt="Sunset at the Beach" class="photo-item">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Sofia_Massif_and_Sofia_Glacier%2C_Karachay-Cherkessia%2C_Caucasus_Mountains.jpg" alt="Mountain Hiking" class="photo-item">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/NYC_wideangle_south_from_Top_of_the_Rock.jpg" alt="City View" class="photo-item">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Mystic_Beach%2C_Vancouver_Island%2C_Canada_10.jpg" alt="Beach Adventure" class="photo-item">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Beech_Forest_%28AU%29%2C_Great_Otway_National_Park%2C_Beauchamp_Falls_--_2019_--_1271.jpg" alt="Forest Trail" class="photo-item">
+</div>
+
+</main>
+   <footer class="footer">
+    <div class="footer-stuff">
+        <div class="footer-contact">
+            <p>Email: miguel.a.zapata.cs@gmail.com</p>
+        </div>
+        <div class="social-icons">
+            <a href="#">GitHub</a> | <a href="#">LinkedIn</a>
+        </div>
+        <div class="footer-copyright">
+            <p> 2025 Miguel Zapata All rights are Reserved</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

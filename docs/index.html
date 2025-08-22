@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/main.css">
+
+<!-- MathJax for LaTeX rendering -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['$$', '$$']],
+      tags: 'ams'
+    },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    
+</head>
+
+<body> 
+
+<header class="header">
+
+
+ 
+
+
+    <h1>Mazuno</h1>
+
+</header>
+
+
+  <!-- The metro line should be outside the content flow -->
+     <div class="metro-line-wrapper">
+        <div class="metro-line"></div>
+        <!-- Dots and labels will be injected here by JS -->
+    </div>
+
+
+  <main class="page-content">
+
+   <section class="hero" id="hero">
+    <div class="hero-text">
+        <p class ="term"> &gt; whoami</p>
+        <h1>I'm Miguel Zapata</h1>
+        <p>Aspiring Software Developer | Hardware Enthusiast |  Always Curious</p>
+        <p>Im a recent computer Science Graduate from the University of Minnesota who starred with the love of gadgets and ended up building software that is efficient and thoughtful. 
+        Edger to learn new things and make a difference.
+        </p>
+        <p>Currently based in Minneapolis, Open to relocation especially cities with strong public transit.</p>
+    </div>
+    <div class="cta">
+        <a href="#projects">[View Projects ->]</a>
+        <a href="#about">[View About Me ->]</a> 
+        <a href = "/resources/docs/Miguel_Zapata_Resume.pdf" download> [Get Resume ->]</a>
+      </div>
+
+  </section>
+
+  <!-- Main Content (Just placeholders) -->
+  <section id="about"> <!--About Me -->
+
+  <div class = bio-snippit>
+  <h1>About Me</h1>
+  <div class = "about-text">
+  <p>
+    Based in Minneapolis Minnesota, I’ve always been curious on how things work and function. From disassembling devices, to exploring train maps when visiting a city, or figuring out why code doesn’t run. I studied Computer Science but my interest started with computer hardware where my curiosity comes from experiences taking apart devices, doing repairs, and understanding the technology inside the chassis. That curiosity also had me brought me the desire to learning new things like exploring new tools and frameworks, as well revisiting old projects to improve on by iterating. 
+    Some of my interests include:
+  </p>
+
+  <h3>Interests</h3>
+    <ul class="interests-list">
+      <li>⚽ Football</li>
+      <li>🚆 Travel</li>
+      <li>📷 Photography</li>
+      <li>🎮 Gaming</li>
+    </ul>
+  <div class="photos">
+    <div class="intrest-photo">
+    
+    <img src="/resources/images/mainpage/IMG_0025.jpg" alt="Stadium">
+    <p>&gt; Football Stadium</p>
+    </div>
+    <div class="intrest-photo">
+    <img src="/resources/images/mainpage/PXL_20230515_163503115.jpg" alt="Church">
+    <p>&gt; Mexico Trip </p>
+    </div>
+    <div class="intrest-photo">
+    <img src="/resources/images/mainpage/IMG_0643.JPG" alt="Train Station">
+    <p>&gt; Chicago Trip</p>
+    </div>
+  </div>
+
+
+  <div class = "cta">
+   <a href="/about/">[Learn More ->]</a>
+  </div>
+ </div>
+    </div>   
+  </section>
+
+  <!--Tease the project so that is to keep it simple-->
+ <section id="projects" class="project-seciton">
+   <div class="pass-grid">
+    
+
+    <a href="/projects/cli-uart/" class="pass-card pass-hardware">
+    <div class="card-content">
+      <h3 class="card-title">Embedded CLI Tool</h3>
+      <div class="card-stack">Language</div>
+      <p class="card-desc">TODO Add Summary</p>
+      <div class="card-bottom-space">
+        <small>UID: 0x72A8  | Issued: 2025</small>
+      </div>
+    </div>
+  </a>
+
+    <a href="/projects/demo-embedded-cli/" class="pass-card pass-web">
+    <div class="card-content">
+      <h3 class="card-title">demo embedded cli</h3>
+      <div class="card-stack">TODO Language * Tools * Tech</div>
+      <p class="card-desc">TODO Add Summary</p>
+      <div class="card-bottom-space">
+        <small>UID: 0xA4DE  | Issued: 2025</small>
+      </div>
+    </div>
+  </a>
+
+ 
+   </div>   
+  </section>
+ <section id="blog" class="blog-preview">
+    <h1>Latest Updates</h1>
+
+
+
+  
+
+
+
+  
+  <article class="blog-entry">
+    <div class="blog-tag tag-test">
+      T
+    </div>
+    <div class="blog-body">
+      <div class="blog-top">
+        <a href="/blog/test-all-features/" class="blog-title">Testing All Markdown Features</a>
+        
+          <span class="blog-time">⏱ 6 min</span>
+        
+      </div>
+      <div class="blog-bottom">
+        <p class="blog-snippet">A post to test code blocks, LaTeX, images, and more.</p>
+        <span class="blog-date">📅 2025-07-26</span>
+      </div>
+    </div>
+  </article>
+
+
+      
+  </section>
+
+ <section id ='current' class="currently-doing">
+ <h1>Currently doing</h1>
+    <h2><span class="terminal-prefix">&gt;</span> now</h2>
+    <ul class="terminal-log">
+      <li><span class="terminal-icon"></span>Applying for Full-time Roles in software development</li>
+      <li><span class="terminal-icon"></span> Learning Rust, WebASM, Android Studio</li>
+      <li><span class="terminal-icon"></span> Revisiting Old Projects</li>
+      <li><span class="terminal-icon"></span> Exploring new Self-Hosting Solutions</li>
+    </ul>
+  </section>
+  
+  <section id = 'contact' class="contact">
+    <h2>Let's Contact</h2>
+    <p>Whether you want to talk tech, collaborate, or just say hi, I'd love to hear from you.</p>
+
+     <!-- add Request limits -->
+        <h2>🎫 Contact</h2>
+        <form name="contact" action="https://formspree.io/f/xldlvepb" method="POST">
+          <label>Name</label>
+          <input type="text" name="name" required>
+      
+          <label>Email</label>
+          <input type="email" name="email" required>
+      
+          <label>Message</label>
+          <textarea name="message" rows="5" required></textarea>
+      
+          <button type="submit">🎟️ Submit Ticket</button>
+        </form>
+      </section>
+    
+
+ <script src="/javascript/script.js" ></script>
+
+</main>
+   <footer class="footer">
+    <div class="footer-stuff">
+        <div class="footer-contact">
+            <p>Email: miguel.a.zapata.cs@gmail.com</p>
+        </div>
+        <div class="social-icons">
+            <a href="https://github.com/Mazun0">GitHub</a> | <a href="https://www.linkedin.com/in/miguel-zapata-/">LinkedIn</a>
+        </div>
+        <div class="footer-copyright">
+            <p> 2025 Miguel Zapata All rights are Reserved</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

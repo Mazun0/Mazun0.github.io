@@ -1,0 +1,29 @@
+---
+title: Blog
+layout: layouts/base.njk
+navType: blogList
+pageType: blogList
+permalink: /blog/
+---
+
+<h2>All Blog Posts</h2>
+<div class="blog-list">
+  {% for post in collections.blog | reverse %}
+    <article class="blog-entry">
+    <div class="blog-tag tag-{{post.data.tagType}}">
+      {{ post.data.tagInitial }}</div>
+      <div class="blog-body">
+        <div class="blog-top">
+          <a href="{{ post.url }}" class="blog-title">{{ post.data.title }}</a>
+          {% if post.data.readTime %}
+            <span class="blog-time">⏱ {{ post.data.readTime }} min</span>
+          {% endif %}
+        </div>
+        <div class="blog-bottom">
+          <p class="blog-snippet">{{ post.data.description }}</p>
+          <span class="blog-date">📅 {{ post.date | readableDate }}</span>
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</div>
