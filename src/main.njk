@@ -9,7 +9,7 @@ permalink: /
   <section class="hero" id="hero">
     <div class="hero-text">
         <p class ="term"> &gt; whoami</p>
-        <h1>I'm Miguel Zapata</h1>
+        <h2 id="hero-term">I'm Miguel Zapata</h2>
         <p>Aspiring Software Developer | Hardware Enthusiast |  Always Curious</p>
         <p>Im a recent computer Science Graduate from the University of Minnesota who starred with the love of gadgets and ended up building software that is efficient and thoughtful. 
         Edger to learn new things and make a difference.
@@ -84,6 +84,9 @@ permalink: /
 {% endfor %}
  
    </div>   
+       <div class="cta">
+     <a href="/projects">[View More Projects ->]</a>
+     </div>
   </section>
  <section id="blog" class="blog-preview">
     <h1>Latest Updates</h1>
@@ -95,7 +98,7 @@ permalink: /
 
 
   {% if latestBlog %}
-  <article class="blog-entry">
+  <div class="blog-entry">
     <div class="blog-tag tag-{{latestBlog.data.tagType}}">
       {{ latestBlog.data.tagInitial if latestBlog.data.tagInitial else 'B' }}
     </div>
@@ -111,12 +114,14 @@ permalink: /
         <span class="blog-date">📅 {{ latestBlog.date | readableDate }}</span>
       </div>
     </div>
-  </article>
+  </div>
 {% else %}
   <p>No blog post available.</p>
 {% endif %}
 
-      
+    <div class="cta">
+     <a href="/blog">[View More Blog ->]</a>
+     </div>
   </section>
 
  <section id ='current' class="currently-doing">

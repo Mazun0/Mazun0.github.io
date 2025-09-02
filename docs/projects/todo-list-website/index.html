@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>todo list website</title>
+    <link rel="stylesheet" href="/css/main.css">
+
+<!-- MathJax for LaTeX rendering -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['$$', '$$']],
+      tags: 'ams'
+    },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body> 
+<header class="header">
+
+        <nav class="metro-nav">
+        <h1>Mazuno</h1>
+            <ul class="nav-line">
+            <li class="nav-dot"><a href="/home">Home</a></li>
+            <li class="nav-dot"><a href="/projects">Projects</a></li>
+            <li class="nav-dot active"><a href="#">Post</a></li>
+            </ul>
+        </nav>
+
+
+</header>
+
+
+<main class="post-content">
+
+ <h1>Todo List Website</h1>
+<p>A todo-list web app where it utilized RESTful APIs in order to Create, update, and delete todo tasks.</p>
+<p>GitHub: TBD</p>
+<h2>📚 Overview</h2>
+<p>This project is an improvement on the final project for Internet Programming course where it emphesises a full stack aproach on building web applications. A todo list while simnple, is a good start to demostrate the skills of a full stack web development.</p>
+<p>The Todo List Web App utilizes RESTful APIs where the users can create thier own tasks, updating notes, and deleting it. As well users can also make and delete comments on the tasks and deleting it when not needed. One of the improvements is to implement a session login system where each user can post thier own todo list.</p>
+<h2>Key Features</h2>
+<p>Some of the key features are based on the Create, Read, Update, and Delete (also known as <strong>CRUD</strong>) operations where users can</p>
+<ul>
+<li>Create thier profile and tasks based on their sessions</li>
+<li>Can mark off tasks or undo.</li>
+<li>Edit Notes on the task page</li>
+<li>Create and delete comments (used for making updates on a chronological order)</li>
+</ul>
+<h2>Stack</h2>
+<ul>
+<li>Language: HTML, CSS, JavaScript, mySQL</li>
+<li>Libraries: Node.js</li>
+<li>Frameworks: Express.js</li>
+<li>Tools: MySQLWorkbench</li>
+</ul>
+<h2>Usage</h2>
+<pre><code class="language-bash"># Installation instructions
+
+# 1. clone the file 
+git clone ....
+
+# Then change to folder
+cd todo_list
+# 2. Initalized node
+node init
+#  Install Express.js and the middle ware
+npm install express pug express-sessions
+
+# 3. Boot the Server 
+node server.js 
+
+# from which it will print 
+Server running on http://localhost:3000
+
+</code></pre>
+<h3>Notes</h3>
+<p>This project uses mySQL with the mySQLWorkbench</p>
+<p>Since started, the project was been tested on Zen Web Browser with
+a 1920 by 1080 and 1800 by 1169 resolution.</p>
+<h2>📸 Screenshots</h2>
+<p>Coming Soon</p>
+<h2>Known Issues</h2>
+<p>Mobile View wasn't yet optimized since it was made in a desktop first prespective.</p>
+<h2>Future Impleemtnations</h2>
+<ul>
+<li>Add User Authentation</li>
+<li>Optimized for Mobile</li>
+<li>Add Elements for Expiring Tasks (1 hour before deadline)</li>
+<li>Mark tasks that are is overdue.</li>
+<li>Implement settings for each user</li>
+</ul>
+
+</main>
+   <footer class="footer">
+    <div class="footer-stuff">
+        <div class="footer-contact">
+            <p>Email: miguel.a.zapata.cs@gmail.com</p>
+        </div>
+        <div class="social-icons">
+            <a href="#">GitHub</a> | <a href="#">LinkedIn</a>
+        </div>
+        <div class="footer-copyright">
+            <p> 2025 Miguel Zapata All rights are Reserved</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

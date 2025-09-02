@@ -6,10 +6,10 @@ pageType: blogList
 permalink: /blog/
 ---
 
-<h2>All Blog Posts</h2>
+<h2 class="blog-header">All Blog Posts</h2>
 <div class="blog-list">
   {% for post in collections.blog | reverse %}
-    <article class="blog-entry">
+    <div class="blog-entry">
     <div class="blog-tag tag-{{post.data.tagType}}">
       {{ post.data.tagInitial }}</div>
       <div class="blog-body">
@@ -24,6 +24,6 @@ permalink: /blog/
           <span class="blog-date">📅 {{ post.date | readableDate }}</span>
         </div>
       </div>
-    </article>
+    </div>
   {% endfor %}
 </div>

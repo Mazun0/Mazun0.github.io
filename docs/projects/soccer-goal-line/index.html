@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soccer goal line technology</title>
+    <link rel="stylesheet" href="/css/main.css">
+
+<!-- MathJax for LaTeX rendering -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['$$', '$$']],
+      tags: 'ams'
+    },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body> 
+<header class="header">
+
+        <nav class="metro-nav">
+        <h1>Mazuno</h1>
+            <ul class="nav-line">
+            <li class="nav-dot"><a href="/home">Home</a></li>
+            <li class="nav-dot"><a href="/projects">Projects</a></li>
+            <li class="nav-dot active"><a href="#">Post</a></li>
+            </ul>
+        </nav>
+
+
+</header>
+
+
+<main class="post-content">
+
+ <h1>Soccer goal line technology</h1>
+<p>A scale model of a Soccer Goal Line System involving with Ultranonic Sensors and RFID.</p>
+<p>GitHub: TBD</p>
+<h2>Overview</h2>
+<p>According to the laws of the game, a goal counts if the ball gets pass through the line inside the goal.</p>
+<p>This project was part of a final project for Embedded Systems and Real Time course where I was given a budget of the parts. While the first two projects that are asigned were more so on how we devlope firmware, the final project represents more of the overall skills on what we've learend. I deviced to create the project for that I enjoy soccer and was curious on how embedded computers play a role on the beutiful game.</p>
+<h2>Key Features</h2>
+<p>Key Functionalities are</p>
+<ul>
+<li>An <strong>RFID</strong> scanner that is distance where the entire ball passes the line fully</li>
+<li>A soccer ball (19cm diameter) that has four <strong>RFID Chips</strong> inserted inside a ball</li>
+<li>Two <strong>Ultrasonic Sensors</strong> that are facing both ends in the goal post used to detect movement of the ball.</li>
+<li>A <strong>16x2 I2C LCD Display</strong>  where it displays the distance of the two senosrs in CM</li>
+<li>A <strong>Red LED</strong> light used for to indicate the activation of the RFID scanner</li>
+<li>A Lego Scale Model with nets.</li>
+</ul>
+<h2>Stack</h2>
+<ul>
+<li>Language: C</li>
+<li>Tools: MPLABX</li>
+<li>Hardware:
+<ul>
+<li>AVR-BLE (ATmega 3208)</li>
+<li>RFID Scanner and Chips</li>
+<li>2x Ulrasonic Distance Sensors</li>
+<li>16x2 I2C Display</li>
+<li>Custom Lego Goal post</li>
+<li>2x Breadboards</li>
+<li>Wires</li>
+<li>2 110 ohm resistors</li>
+<li>Red LED light</li>
+<li>Green LED light</li>
+</ul>
+</li>
+</ul>
+<h2>🔧 Usage</h2>
+<p>This project is designed with a custom  soccer goal lego design  and a
+19cm diamemeter soccer ball that is disceted to insert the RFID chips.</p>
+<p>As well the RFID scanner was soldered with pins where I need to maintain a stable connection.</p>
+<h2>Notes and Challenges</h2>
+<p>Trying to design a system for a sport that is well know for fast pace and physical especially down to a scale model represents a few challenges.</p>
+<p>First was the timing as well bring the logic. Having the Ultrasonic Sensors wasn’t enough and could represent errors if the ball was read outside the goal. I worked around with it by adding the logic that starts the timer when the ball reached the line. As well to abide the rules of the sport and counting the positions for the chips inside, I have to account the distance of the RFID where it’s reachable accounting the rules where the ball needs to fully pass the line.</p>
+<p>Another challenge is the timing, where due to the nature of the sport, having a more forgiving time would make it too easy to read the ball but a much quicker time would not be too forgiving.</p>
+<p>For debugging, I settled to use an LCD display to read the distance between the goal post read by the distance sensors, as well having two lights where red represents the search activation and green for goal.</p>
+<h2>📸 Screenshots/ Media</h2>
+<p>Coming soon</p>
+<h2>Known Issues</h2>
+<p>Some issues that I've encountered that are the red ligths faints a bit but not well lit until the distance sensors reads the ball.</p>
+<h2>Future Improvments</h2>
+<p>planned Improvements</p>
+<ul>
+<li>
+<p>Impement FreeRTOS</p>
+</li>
+<li>
+<p>Implement Bluetooth Low Energy to create an app</p>
+</li>
+<li>
+<p>Add more functionality to the LCD display like a GOAL messaege</p>
+</li>
+</ul>
+<!-- 
+🧼 Optional Add-Ons:
+
+You can add these at the end if relevant:
+
+License (MIT, etc.)
+
+Author or Contact Info
+
+Attributions if you used external templates or tools -->
+<!-- ![Screenshot](/resources/images/example.jpg) -->
+
+</main>
+   <footer class="footer">
+    <div class="footer-stuff">
+        <div class="footer-contact">
+            <p>Email: miguel.a.zapata.cs@gmail.com</p>
+        </div>
+        <div class="social-icons">
+            <a href="#">GitHub</a> | <a href="#">LinkedIn</a>
+        </div>
+        <div class="footer-copyright">
+            <p> 2025 Miguel Zapata All rights are Reserved</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
